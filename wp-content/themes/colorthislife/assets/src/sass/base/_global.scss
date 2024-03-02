@@ -1,0 +1,86 @@
+@import "./_mixins.scss";
+@import "./_variables.scss";
+@import "./_colors.scss";
+
+html,
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: "Almoni", Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	min-width: 320px;
+	overflow-x: hidden;
+	background-color: transparent;
+}
+
+* {
+	font-family: "Almoni", Arial, Helvetica, sans-serif;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+main {
+	flex: 1;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	max-width: 1500px;
+	width: 100%;
+	margin: 0px auto;
+}
+
+.container-xxl {
+	margin: 0px auto;
+	width: 100%;
+	max-width: 1440px;
+	padding: 0px 70px;
+}
+
+.container-xl {
+	margin: 0px auto;
+	width: 100%;
+	max-width: 1170px;
+	padding: 0px 15px;
+}
+
+.container-md {
+	margin: 0px auto;
+	width: 100%;
+	max-width: 867px;
+	padding: 0px 15px;
+}
+
+.container-sm {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1050px;
+	padding: 0;
+}
+
+.container-xs {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 850px;
+	padding: 0;
+}

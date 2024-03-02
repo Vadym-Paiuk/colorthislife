@@ -1,0 +1,39 @@
+@import "./base/_mixins.scss";
+@import "./base/_variables.scss";
+@import "./base/_colors.scss";
+
+/* __________ TYPOGRAPHY BEGIN __________*/
+
+@import "./base/_typography.scss";
+
+/* __________ TYPOGRAPHY STYLE END __________*/
+
+/* __________ BASE STYLE BEGIN __________*/
+
+@import "./base/_global.scss";
+@import "./base/_rtl.scss";
+
+/* __________ BASE STYLE END __________*/
+
+/* __________ LAYOUT  BEGIN __________*/
+
+@import "./layout/_header.scss";
+@import "./layout/_footer.scss";
+
+/* __________ LAYOUT  BEGIN __________*/
+
+/* __________ COMPONENTS  BEGIN __________*/
+
+@import "./components/ui/buttons/_button.scss";
+
+/* __________ COMPONENTS  END __________*/
+
+/* __________ MODAL  BEGIN __________*/
+
+/* __________ MODAL  END __________*/
+
+/* __________  PAGE BEGIN __________*/
+
+@import "./pages/home-page/_home-page.scss";
+
+/* ___________  PAGE END ___________*/
