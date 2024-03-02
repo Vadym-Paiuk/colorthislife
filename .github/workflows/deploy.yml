@@ -20,5 +20,6 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.USER_LOGIN }}
           port: ${{ secrets.SSH_PORT }}
+          password: ${{ secrets.PASSWORD }}
           source: "wp-content/*"
           target: "~/public_html"
