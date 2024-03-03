@@ -2,17 +2,21 @@
 @import "./_variables.scss";
 @import "./_colors.scss";
 
-@include font-face("Heebo", "../fonts/Heebo/HeeboBold/HeeboBold", 700, normal);
-@include font-face("Heebo", "../fonts/Heebo/HeeboRegular/HeeboRegular", 600, normal);
-@include font-face("Heebo", "../fonts/Heebo/HeeboMedium/HeeboMedium", 500, normal);
-@include font-face("Heebo", "../fonts/Heebo/HeeboLight/HeeboLight", 400, normal);
-@include font-face("Almoni", "../fonts/Almoni/AlmoniMLv5AAADBold/AlmoniMLv5AAADBold", 600, normal);
-@include font-face("Almoni", "../fonts/Almoni/AlmoniMLv5AAARegular/AlmoniMLv5AAARegular", 500, normal);
-@include font-face("Almoni", "../fonts/Almoni/AlmoniMLv5AAALight/AlmoniMLv5AAALight", 400, normal);
+@include font-face("Chango", "../fonts/Chango/Chango-Regular", 400, normal);
+@include font-face("Lato", "../fonts/Lato/Lato-Regular", 400, normal);
+@include font-face("Lato", "../fonts/Lato/Lato-Bold", 700, normal);
+@include font-face("Lato", "../fonts/Lato/Lato-Black", 900, normal);
+@include font-face("Rubik", "../fonts/Rubik/Rubik-Medium", 500, normal);
+@include font-face("Rubik", "../fonts/Rubik/Rubik-Bold", 700, normal);
+@include font-face("TT Norms", "../fonts/TT-Norms/TTNorms-Regular", 400, normal);
+@include font-face("TT Norms", "../fonts/TT-Norms/TTNorms-Medium", 500, normal);
+@include font-face("TT Norms", "../fonts/TT-Norms/TTNorms-MediumItalic", 500, italic);
+@include font-face("TT Norms", "../fonts/TT-Norms/TTNorms-Bold", 700, normal);
+@include font-face("TT Norms", "../fonts/TT-Norms/TTNorms-ExtraBold", 800, normal);
 
 h1 {
 	font-size-responsive: 36px 42px 480px 1300px;
-	margin: 0px;
+	margin: 0;
 	text-transform: uppercase;
 	font-weight: 800;
 	line-height: 50px;
@@ -20,7 +24,7 @@ h1 {
 
 h2 {
 	font-size-responsive: 30px 42px 480px 1300px;
-	margin: 0px;
+	margin: 0;
 	text-transform: uppercase;
 	font-weight: 800;
 	line-height: 39px;
@@ -28,7 +32,7 @@ h2 {
 
 h3 {
 	font-size-responsive: 24px 26px 480px 1300px;
-	margin: 0px;
+	margin: 0;
 	text-transform: uppercase;
 	font-weight: 800;
 	line-height: 39px;
@@ -36,8 +40,8 @@ h3 {
 
 h4 {
 	font-size-responsive: 24px 18px 480px 1300px;
-	margin: 0px;
-	margin: 0px;
+	margin: 0;
+	margin: 0;
 	text-transform: uppercase;
 	font-weight: 800;
 	line-height: 39px;
@@ -45,7 +49,7 @@ h4 {
 
 h5 {
 	font-size-responsive: 18px 16px 480px 1300px;
-	margin: 0px;
+	margin: 0;
 	text-transform: uppercase;
 	font-weight: 800;
 	line-height: 39px;
@@ -53,8 +57,8 @@ h5 {
 
 h6 {
 	font-size-responsive: 18px 14px 480px 1300px;
-	margin: 0px;
-	margin: 0px;
+	margin: 0;
+	margin: 0;
 	text-transform: uppercase;
 	font-weight: 800;
 	line-height: 39px;
@@ -64,6 +68,112 @@ p {
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 24px;
-	padding: 0px;
-	margin: 0px;
+	padding: 0;
+	margin: 0;
+}
+
+/*text style*/
+@mixin h2 {
+	font-size: 64px;
+	font-family: 'Chango', sans-serif;
+	font-weight: 400;
+	letter-spacing: 0;
+	line-height: 113.31750154495239%;
+}
+@mixin h3-chango {
+	font-size: 48px;
+	font-family: 'Chango', sans-serif;
+	font-weight: 400;
+	letter-spacing: 0;
+	line-height: 113.31750154495239%;
+}
+@mixin h3-tt-norms {
+	font-size: 42px;
+	font-family: 'TT Norms', sans-serif;
+	font-weight: 700;
+	letter-spacing: 0;
+}
+@mixin h4-tt-norms {
+	font-size: 32px;
+	font-family: 'TT Norms', sans-serif;
+	font-weight: 800;
+	letter-spacing: 0;
+	line-height: 28px;
+}
+@mixin h4-chango {
+	font-size: 32px;
+	font-family: 'Chango', sans-serif;
+	font-weight: 400;
+	letter-spacing: 0;
+	line-height: 113.31750154495239%;
+}
+@mixin button {
+	font-size: 20px;
+	font-family: 'Chango', sans-serif;
+	font-weight: 400;
+	letter-spacing: 0;
+}
+@mixin body-regular {
+	font-size: 20px;
+	font-family: 'TT Norms', sans-serif;
+	font-weight: 400;
+	letter-spacing: 0;
+	line-height: 26px;
+}
+@mixin body-bold {
+	font-size: 20px;
+	font-family: 'TT Norms', sans-serif;
+	font-weight: 700;
+	letter-spacing: 0;
+}
+@mixin body-medium---prominent {
+	font-size: 24px;
+	font-family: 'TT Norms', sans-serif;
+	font-weight: 500;
+	letter-spacing: 0;
+	line-height: 32px;
+}
+@mixin caption-regular {
+	font-size: 14px;
+	font-family: 'TT Norms', sans-serif;
+	font-weight: 400;
+	letter-spacing: 0;
+}
+@mixin caption-medium {
+	font-size: 14px;
+	font-family: 'TT Norms', sans-serif;
+	font-weight: 500;
+	letter-spacing: 0;
+}
+@mixin caption-bold {
+	font-size: 14px;
+	font-family: 'TT Norms', sans-serif;
+	font-weight: 700;
+	letter-spacing: 0;
+}
+@mixin caption-bold-overline {
+	font-size: 14px;
+	font-family: 'TT Norms', sans-serif;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+}
+@mixin caption-medium-italic {
+	font-size: 14px;
+	font-family: 'TT Norms', sans-serif;
+	font-weight: 500;
+	font-style: italic;
+	letter-spacing: 0;
+	line-height: 20px;
+}
+@mixin rubik-as-an-addition-to-the-title {
+	font-size: 58px;
+	font-family: 'Rubik', sans-serif;
+	font-weight: 500;
+	letter-spacing: 0;
+}
+@mixin mini-caption-regular {
+	font-size: 12px;
+	font-family: 'TT Norms', sans-serif;
+	font-weight: 400;
+	letter-spacing: 0;
 }

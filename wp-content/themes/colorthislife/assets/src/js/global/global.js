@@ -31,22 +31,27 @@ class Global {
         })
 
         $(document).on('click', function (event) {
+            let $toggleButton = $('.toggle-dropdown'),
+                $dropdown = $('.dropdown')
 
-            $('.toggle-dropdown').each(function (index) {
-                let $toggleButton = $(this),
-                    $parent = $toggleButton.parent(),
-                    $dropdown = $parent.find('.dropdown')
+            if ($(event.target).closest('.dropdown').length) {
+                return false;
+            }
 
-                if (!$(event.target).closest('.dropdown').length && !$(event.target).is('.toggle-dropdown')) {
-                    console.log($dropdown.is(':visible'))
-                    if ($dropdown.is(':visible')) {
-                        $dropdown.slideToggle()
-                        $toggleButton.removeClass('active')
-                    }
-                }
-            });
+            if ($(event.target).closest('.toggle-dropdown').length) {
+                return false;
+            }
 
+            if ($(event.target).is('.toggle-dropdown')) {
+                return false;
+            }
 
+            if (!$dropdown.is(':visible')) {
+                return false;
+            }
+
+            $dropdown.slideToggle()
+            $toggleButton.removeClass('active')
         });
     }
 
@@ -62,4 +67,6 @@ class Global {
     }
 }
 
-export default Global.getInstance();
+$(function () {
+    Global.getInstance();
+});
