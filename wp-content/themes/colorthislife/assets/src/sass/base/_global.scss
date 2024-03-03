@@ -10,18 +10,19 @@ body {
 }
 
 body {
-	margin: 0px;
-	padding: 0px;
-	font-family: "Almoni", Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	font-family: 'TT Norms', sans-serif;
 	font-weight: 400;
 	font-size: 16px;
 	min-width: 320px;
 	overflow-x: hidden;
-	background-color: transparent;
+	background-color: $background-stroke-background;
+	font-feature-settings: "liga" off;
 }
 
 * {
-	font-family: "Almoni", Arial, Helvetica, sans-serif;
+	font-family: 'TT Norms', sans-serif;
 }
 
 *,
@@ -45,30 +46,30 @@ a {
 }
 
 .container {
-	max-width: 1500px;
+	max-width: 1344px;
 	width: 100%;
-	margin: 0px auto;
+	margin: 0 auto;
 }
 
 .container-xxl {
-	margin: 0px auto;
+	margin: 0 auto;
 	width: 100%;
 	max-width: 1440px;
-	padding: 0px 70px;
+	padding: 0 70px;
 }
 
 .container-xl {
-	margin: 0px auto;
+	margin: 0 auto;
 	width: 100%;
 	max-width: 1170px;
-	padding: 0px 15px;
+	padding: 0 15px;
 }
 
 .container-md {
-	margin: 0px auto;
+	margin: 0 auto;
 	width: 100%;
 	max-width: 867px;
-	padding: 0px 15px;
+	padding: 0 15px;
 }
 
 .container-sm {

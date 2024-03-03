@@ -1,21 +1,44 @@
-$white: #ffffff;
-$black: #000000;
-$orange: #FF7562;
-$baby-blue: #CAE5FF;
-$blue: #4F5BC6;
-$blue-400: #424DB0;
-$blue-600: #061e33;
-$blue-light: #D1E1F6;
-$blue-dark: #22376D;
-$green: #3A7975;
-$lilac: #DFBCFB;
-$logo-blue: #0C2840;
-$red: #F08787;
-$yellow: #F7FA6E;
-$neutral-50: #F6F8FB;
-$neutral-400: #CED4DA;
-$neutral-500: #ADB5BD;
-$neutral-600: #6C757D;
-$neutral-650: #343A40;
-$neutral-700: #212529;
-$neutral-800: #343A40;
+/*paint style*/
+
+$text-color-0: #414141;
+$text-color-1: #525252;
+$text-color-white: #ffffff;
+$primary-peach: #f27979;
+$primary-on-top: #b25050;
+$background-stroke-background: #f9f6f3;
+$background-stroke-2: #f0eae4;
+$background-stroke-3: #e3d5c7;
+$background-stroke-4: #c9b7a5;
+$background-stroke-5: #a59c99;
+$background-stroke-white: #ffffff;
+$violet-main: #a675eb;
+$violet-background: #d1bbf0;
+$violet-on-top: #5721a3;
+$violet-hover-underlay: #ece4f7;
+$blue-main: #40b0d6;
+$blue-backgorund: #a2dcef;
+$blue-on-top: #007aa3;
+$blue-hover-underlay: #e4f2f7;
+$yellow-main: #f2c626;
+$yellow-background: #efdfa2;
+$yellow-on-top: #d8a900;
+$yellow-hover-underlay: #f7eecf;
+$pink-main: #dd6ad2;
+$pink-background: #f0bbea;
+$pink-on-top: #a52198;
+$pink-hover-underlay: #ffeded;
+$green-main: #4ace8f;
+$green-background: #91dbb7;
+$green-on-top: #00a354;
+$green-hover-underlay: #ddf0e6;
+$orange-main: #ff9a59;
+$orange-background: #f7caad;
+$orange-on-top: #e56717;
+$orange-hover-underlay: #f7ebe4;
+
+
+/*effect style*/
+@mixin box-shadow-1 {
+	box-shadow: 0px 2px 5px rgba(84, 84, 84, 0.1), 0px 8px 8px rgba(84, 84, 84, 0), 0px 19px 11px rgba(84, 84, 84, 0), 0px 34px 14px rgba(84, 84, 84, 0), 0px 53px 15px rgba(84, 84, 84, 1);
+}
+

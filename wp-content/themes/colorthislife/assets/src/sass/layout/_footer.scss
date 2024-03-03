@@ -3,193 +3,186 @@
 @import "../base/_colors.scss";
 
 .footer {
-	display: flex;
-	flex-direction: column;
-	padding: 70px 0 0 0;
+	padding: 64px 0;
+	background: $background-stroke-3;
 	
-	.footer-top {
+	.footer-container {
 		display: flex;
-		gap: 231px;
-		padding-bottom: 107px;
+		flex-direction: column;
+		gap: 64px;
 		
-		.footer-top-info {
-			display: flex;
-			flex-direction: column;
-			gap: 30px;
-			min-width: 310px;
-			
-			.footer-top-logo {
-				display: flex;
-				flex-direction: column;
-				gap: 16px;
-				padding: 0;
-				
-				.footer-top-logo-description {
-					font-family: 'Almoni', serif;
-					font-size: 14px;
-					font-weight: 600;
-					font-stretch: normal;
-					font-style: normal;
-					line-height: 1.35;
-					letter-spacing: -0.07px;
-					color: $white;
-				}
-			}
-			
-			.footer-top-subscribe {
-				display: flex;
-				flex-direction: column;
-				gap: 16px;
-				padding: 0;
-				
-				.footer-top-subscribe-title {
-					font-family: 'Almoni', serif;
-					font-size: 14px;
-					font-weight: 600;
-					font-stretch: normal;
-					font-style: normal;
-					line-height: 1.35;
-					letter-spacing: -0.07px;
-					color: $white;
-				}
-			}
-			
-			.footer-top-socials {
-				display: flex;
-				flex-direction: column;
-				gap: 16px;
-				padding: 0;
-				
-				.footer-top-socials-title {
-					font-family: 'Almoni', serif;
-					font-size: 14px;
-					font-weight: 600;
-					font-stretch: normal;
-					font-style: normal;
-					line-height: 1.35;
-					letter-spacing: -0.07px;
-					color: $white;
-				}
-			}
-		}
-		
-		.footer-top-menu-list {
+		.footer-row {
 			display: flex;
 			justify-content: space-between;
-			width: 100%;
 			
-			.footer-top-menu {
-				display: flex;
-				flex-direction: column;
-				gap: 33px;
-				
-				.footer-top-menu-title {
-					font-family: 'Almoni', serif;
-					font-style: normal;
-					font-weight: 600;
-					font-size: 14px;
-					line-height: 135%;
-					letter-spacing: -0.005em;
-					color: $white;
-				}
-				
-				.menu {
+			&.footer-middle {
+				.footer-top-menu {
+					display: flex;
+					flex-direction: column;
+					gap: 24px;
+					width: fit-content;
 					
-					ul {
+					.menu-title {
+						font-family: 'TT Norms', sans-serif;
+						font-size: 24px;
+						font-weight: 500;
+						font-stretch: normal;
+						font-style: normal;
+						line-height: 1.33;
+						letter-spacing: normal;
+						color: $text-color-1;
+						text-transform: unset;
+					}
+					
+					.menu {
 						display: flex;
 						flex-direction: column;
-						gap: 22px;
+						gap: 16px;
 						
 						li {
+							&.menu-item-bold {
+								a {
+									font-weight: bold;
+									line-height: normal;
+								}
+							}
 							
 							a {
-								width: max-content;
-								color: $neutral-400;
+								font-family: 'TT Norms', sans-serif;
+								font-size: 20px;
+								font-weight: normal;
+								font-stretch: normal;
+								font-style: normal;
+								line-height: 1.3;
+								letter-spacing: normal;
+								color: $text-color-1;
 							}
 						}
 					}
 				}
-			}
-		}
-	}
-	
-	.footer-bottom {
-		display: flex;
-		border-top: solid 1px $neutral-500;
-		padding: 22px 0;
-		
-		.container {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			
-			.footer-bottom-start {
-				.menu {
+				
+				.footer-top-form {
 					display: flex;
+					flex-direction: column;
+					gap: 16px;
+					width: 310px;
 					
-					li {
-						padding: 0 10px;
-						position: relative;
-						
-						&:first-of-type {
-							padding-inline-start: 0;
-						}
-						
-						&:not(:last-of-type):after {
-							content: '|';
-							position: absolute;
-							font-size: 16px;
-							inset-inline-end: 0;
-							top: 50%;
-							transform: translate(-50%, -50%);
-							color: $neutral-500;
-						}
-						
-						a {
-							font-family: 'Almoni', serif;
-							font-size: 16px;
-							font-weight: normal;
-							font-stretch: normal;
-							font-style: normal;
-							line-height: 1.6;
-							letter-spacing: -0.27px;
-							color: $neutral-500;
-						}
+					.footer-top-form-title {
+						font-family: 'TT Norms', sans-serif;
+						font-size: 20px;
+						font-weight: normal;
+						font-stretch: normal;
+						font-style: normal;
+						line-height: 1.3;
+						letter-spacing: normal;
+						color: $text-color-0;
+						text-transform: none;
+					}
+					
+					form {
+						display: flex;
+						flex-direction: column;
+						gap: 16px;
 					}
 				}
 			}
 			
-			.footer-bottom-end {
-				.menu {
+			&.footer-bottom {
+				
+				.footer-bottom-start {
 					display: flex;
+					flex-direction: column;
+					gap: 10px;
 					
-					li {
-						padding: 0 10px;
-						position: relative;
+					.copyright {
+						font-family: 'TT Norms', sans-serif;
+						font-size: 14px;
+						font-weight: normal;
+						font-stretch: normal;
+						font-style: normal;
+						line-height: normal;
+						letter-spacing: normal;
+						color: $text-color-1;
+					}
+					
+					.menu {
+						display: flex;
+						gap: 30px;
 						
-						&:last-of-type {
-							padding-inline-end: 0;
+						li {
+							position: relative;
+							
+							&:not(:last-of-type):after {
+								content: '';
+								position: absolute;
+								width: 2px;
+								height: 2px;
+								border-radius: 1px;
+								background: $text-color-1;
+								top: 50%;
+								transform: translateY(-50%);
+								inset-inline-end: -16px;
+							}
+							
+							a {
+								font-family: 'TT Norms', sans-serif;
+								font-size: 14px;
+								font-weight: bold;
+								font-stretch: normal;
+								font-style: normal;
+								line-height: normal;
+								letter-spacing: normal;
+								color: $text-color-1;
+							}
 						}
+					}
+				}
+				
+				.footer-bottom-end {
+					align-self: flex-end;
+					
+					.menu {
+						display: flex;
+						gap: 30px;
 						
-						&:not(:last-of-type):after {
-							content: '|';
-							position: absolute;
-							font-size: 16px;
-							inset-inline-end: 0;
-							top: 50%;
-							transform: translate(-50%, -50%);
-							color: $neutral-500;
-						}
-						
-						a {
-							font-family: 'Almoni', serif;
-							font-size: 16px;
-							font-weight: normal;
-							font-stretch: normal;
-							font-style: normal;
-							line-height: 1.6;
-							letter-spacing: -0.27px;
-							color: $neutral-500;
+						li {
+							display: flex;
+							gap: 5px;
+							position: relative;
+							
+							&:not(:last-of-type):after {
+								content: '';
+								position: absolute;
+								width: 2px;
+								height: 2px;
+								border-radius: 1px;
+								background: $text-color-1;
+								top: 50%;
+								transform: translateY(-50%);
+								inset-inline-end: -16px;
+							}
+							
+							.menu-item-prefix {
+								font-family: 'TT Norms', sans-serif;
+								font-size: 14px;
+								font-weight: normal;
+								font-stretch: normal;
+								font-style: normal;
+								line-height: normal;
+								letter-spacing: normal;
+								color: $text-color-1;
+							}
+							
+							a {
+								font-family: 'TT Norms', sans-serif;
+								font-size: 14px;
+								font-weight: bold;
+								font-stretch: normal;
+								font-style: normal;
+								line-height: normal;
+								letter-spacing: normal;
+								color: $text-color-1;
+							}
 						}
 					}
 				}

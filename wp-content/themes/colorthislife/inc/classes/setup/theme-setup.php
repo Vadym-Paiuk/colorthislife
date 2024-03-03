@@ -2,9 +2,8 @@
 
 namespace Theme\Inc\Classes\Setup;
 
-use Theme\inc\classes\video\Video_Post_Catalog;
-use Theme\inc\classes\video\Video_Post_Views;
 use Theme\Inc\Traits\Singleton_Trait;
+use Theme\Inc\Classes\Menu\Footer_Menu_Walker;
 
 class Theme_Setup {
 	
@@ -23,13 +22,14 @@ class Theme_Setup {
 		add_action( 'wp_enqueue_scripts', [ $this, 'dequeue_style' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'localize_script' ] );
 		add_filter( 'wpcf7_autop_or_not', '__return_false' );
-		add_action( 'init', [ $this, 'deactivate_gutenberg_editor' ] );
+		//add_action( 'init', [ $this, 'deactivate_gutenberg_editor' ] );
 	}
 	
 	public static function bootstrap() {
 		Svg::get_instance();
 		Taxonomy::get_instance();
 		CPT::get_instance();
+		Footer_Menu_Walker::get_instance();
 	}
 	
 	public function deactivate_gutenberg_editor() {
@@ -101,13 +101,15 @@ class Theme_Setup {
 	
 	public function register_menus() {
 		register_nav_menus( array(
-			'header-menu'         => esc_html__( 'Header Menu' ),
-			'footer-menu-1'       => esc_html__( 'Footer Menu 1' ),
-			'footer-menu-2'       => esc_html__( 'Footer Menu 2' ),
-			'footer-menu-3'       => esc_html__( 'Footer Menu 3' ),
-			'footer-menu-4'       => esc_html__( 'Footer Menu 4' ),
-			'footer-develop-menu' => esc_html__( 'Footer Develop Menu' ),
-			'footer-privacy-menu' => esc_html__( 'Footer Privacy Menu' ),
+			'header-menu'           => esc_html__( 'Header Menu' ),
+			'mega-menu-categorise'  => esc_html__( 'Mega Menu Categories' ),
+			'mega-menu-collections' => esc_html__( 'Mega Menu Collections' ),
+			'footer-menu-1'         => esc_html__( 'Footer Menu 1' ),
+			'footer-menu-2'         => esc_html__( 'Footer Menu 2' ),
+			'footer-menu-3'         => esc_html__( 'Footer Menu 3' ),
+			'footer-menu-4'         => esc_html__( 'Footer Menu 4' ),
+			'footer-develop-menu'   => esc_html__( 'Footer Develop Menu' ),
+			'footer-privacy-menu'   => esc_html__( 'Footer Privacy Menu' ),
 		) );
 	}
 	
